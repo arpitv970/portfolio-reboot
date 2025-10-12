@@ -2,6 +2,26 @@
 
 First off, thank you for considering contributing to Portfolio Reboot! This project is an open-source learning experiment, and contributions from the community are welcome.
 
+## About This Project
+
+This is my **personal learning journey built in public**. I'm experimenting with modern web technologies (Astro, GraphQL, NestJS, TypeORM) and sharing everything openly.
+
+### Why I Built This in Public
+
+- **Learning Together** - We all learn better when we share our journey
+- **Transparency** - Real projects have bugs, iterations, and mistakes - that's okay!
+- **Community Growth** - Your contributions help both of us learn
+
+### Feel Free to Fork and Build Your Own
+
+This project is **completely open**. You can:
+- Fork it and build your own portfolio
+- Use parts of it in your projects
+- Learn from the code and implementation
+- Modify it however you want
+
+If you do use this project, a small credit or shoutout would be amazing (but not required). It motivates me to keep building in public!
+
 ## Table of Contents
 
 - [Code of Conduct](#code-of-conduct)
@@ -31,6 +51,14 @@ This project follows a simple code of conduct:
 - pnpm >= 10.13.1
 - PostgreSQL (for local development)
 - Git
+
+### Tools Used
+
+This project uses **Biome** for linting, formatting, and code quality:
+- Fast, all-in-one toolchain (replaces ESLint + Prettier)
+- Automatic code formatting
+- Import organization
+- Lint rule enforcement
 
 ### Initial Setup
 
@@ -110,6 +138,23 @@ git checkout -b fix/issue-description
 3. Write or update tests as needed
 4. Update documentation if required
 
+### Code Quality
+
+Before committing, ensure your code passes formatting and linting:
+
+```bash
+# Format all code with Biome
+pnpm format:all
+
+# Lint and auto-fix issues
+pnpm lint:all
+
+# Run both format, lint, and organize imports
+pnpm biome:all
+```
+
+**Pro tip**: Run `pnpm biome:all` before committing to ensure code quality.
+
 ### Running Tests
 
 ```bash
@@ -163,10 +208,18 @@ portfolio-reboot/
 
 ### Formatting
 
-- Use 2 spaces for indentation
-- Use single quotes for strings
-- Add trailing commas in multi-line objects/arrays
-- Maximum line length: 100 characters
+**We use Biome for formatting** - don't worry about manual formatting rules! Just run:
+
+```bash
+pnpm format:all
+```
+
+Biome configuration is set at the root level and enforces:
+- Consistent indentation (2 spaces)
+- Quote style
+- Trailing commas
+- Line length limits
+- Import organization
 
 ### Naming Conventions
 
@@ -257,6 +310,7 @@ Before creating an issue, please:
 ### Before Submitting
 
 - [ ] Code follows the project's coding standards
+- [ ] **Ran `pnpm biome:all` to format and lint code**
 - [ ] All tests pass locally
 - [ ] New tests added for new features
 - [ ] Documentation updated (if needed)

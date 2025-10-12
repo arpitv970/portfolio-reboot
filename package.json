@@ -1,12 +1,17 @@
 {
-  "name": "portfolio",
-  "version": "0.0.1",
-  "description": "This is monorepo for my personal portfolio and all the tech stack is used here is just for experimentations",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
+	"name": "portfolio",
+	"version": "0.0.1",
+	"description": "This is monorepo for my personal portfolio and all the tech stack is used here is just for experimentations",
+	"scripts": {
+		"format:all": "pnpm exec biome format --write",
+		"lint:all": "pnpm exec biome lint --write",
+		"biome:all": "pnpm exec biome check --write"
+	},
+	"keywords": [],
 	"author": "Arpit Verma",
-  "license": "ISC",
-  "packageManager": "pnpm@10.13.1"
+	"license": "ISC",
+	"packageManager": "pnpm@10.13.1",
+	"devDependencies": {
+		"@biomejs/biome": "2.2.5"
+	}
 }

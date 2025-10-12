@@ -28,6 +28,35 @@ This reboot is not just a migration but an **experimental learning project** to 
 - Database modeling with TypeORM
 - Security best practices
 
+## Learning in Public
+
+This project is my personal journey of **learning by building in public**. I believe in:
+
+- **Transparency** - Sharing the learning process, including mistakes and iterations
+- **Community** - Learning together and helping others on similar journeys
+- **Open Knowledge** - Making this work freely available for everyone
+
+### Use This Project Freely
+
+You are **completely free** to:
+- ✅ Use this code for your own portfolio
+- ✅ Modify and adapt it to your needs
+- ✅ Learn from the implementation
+- ✅ Build upon these ideas
+- ✅ Use it commercially or personally
+
+**No legal complications, no restrictions!** This is open-source in the truest sense.
+
+### A Simple Request
+
+If you find this project helpful, I'd deeply appreciate:
+- 🌟 A star on this repository
+- 🙏 A mention or credit somewhere in your project
+- 📣 A shoutout on social media or your blog
+- 🔗 A link back to this repo
+
+**This is NOT required** - just a humble request. Your success and learning are what matter most. But credits and shoutouts help me grow and motivate me to build more in public!
+
 ## Architecture
 
 ### Monorepo Structure
@@ -59,6 +88,7 @@ portfolio-reboot/
 - **Package Manager**: pnpm
 - **Monorepo**: pnpm workspaces
 - **TypeScript**: End-to-end type safety
+- **Linting & Formatting**: Biome (fast, all-in-one toolchain)
 
 ### Data Flow
 
@@ -166,6 +196,11 @@ pnpm build
 
 # Run tests
 pnpm test
+
+# Code quality
+pnpm format:all      # Format code with Biome
+pnpm lint:all        # Lint and fix issues with Biome
+pnpm biome:all       # Run format, lint, and organize imports
 ```
 
 ## Learning Goals
@@ -186,9 +221,17 @@ This is an open-source project! Contributions, issues, and feature requests are 
 
 Feel free to check the [issues page](https://github.com/arpitv970/portfolio-reboot/issues) if you want to contribute.
 
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
+
 ## License
 
-MIT License - feel free to use this project for learning and inspiration!
+**MIT License** - This project is completely free to use, modify, and distribute!
+
+You can do whatever you want with this code - no strings attached. Build your portfolio, learn from it, modify it, even use it commercially. That's the spirit of open-source!
+
+If you use this project and find it helpful, a credit or shoutout would mean the world to me (but it's not legally required). It helps me continue building in public and sharing knowledge.
+
+See [LICENSE](./LICENSE) for full details.
 
 ## Author
 
