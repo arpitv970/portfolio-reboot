@@ -5,7 +5,13 @@
 	"scripts": {
 		"format:all": "pnpm exec biome format --write",
 		"lint:all": "pnpm exec biome lint --write",
-		"biome:all": "pnpm exec biome check --write"
+		"biome:all": "pnpm exec biome check --write",
+		"format:web": "pnpm --filter apps/web format",
+		"lint:web": "pnpm --filter apps/web lint",
+		"biome:web": "pnpm --filter apps/web biome",
+		"dev:web": "pnpm --filter apps/web dev",
+		"build:web": "pnpm --filter apps/web build",
+		"preview:web": "pnpm --filter apps/web preview"
 	},
 	"keywords": [],
 	"author": "Arpit Verma",
