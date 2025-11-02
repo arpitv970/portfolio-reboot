@@ -1,0 +1,13 @@
+---
+import { DOGS } from "../../utils/constants";
+export const getStaticPaths = () => {
+	return DOGS.map(({ slug, name, breed }) => ({
+		params: { slug },
+		props: { name, breed },
+	}));
+};
+
+const { name, breed } = Astro.props;
+---
+
+<div>Hi this is {name}, of breed {breed}</div>

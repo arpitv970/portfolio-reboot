@@ -1,0 +1,10 @@
+---
+import { DOGS } from "../../utils/constants";
+---
+
+<h1>This is the SSG dog page</h1>
+<ul>
+  {DOGS.map((item, idx) => (
+  <li><a href={`/dogs-ssr/${item.slug}`}>{item.name}</a></li>
+  ))}
+</ul>

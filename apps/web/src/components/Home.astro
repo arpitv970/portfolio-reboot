@@ -1,0 +1,29 @@
+---
+import TestComponent from "./TestComponent.astro";
+---
+<section>
+  <h1>This is Home page built using <a href="https://astro.build" target="_blank">Astro</a></h1>
+  <p>We are here trying out various file-supports in this framework, which goes as follows:</p>
+  <ul>
+    <li><a href="/">.astro</a></li>
+    <li><a href="/md">.md</a></li>
+  </ul>
+</section>
+<section>
+  <h1>This is for dynamic routing</h1>
+  <p>Here is for SSG mode</p>
+  <ul>
+    <li><a href="/dogs">SSG</a></li>
+    <li><a href="/dogs-ssr">SSR</a></li>
+  </ul>
+</section>
+<section>
+  <TestComponent greet={"Hey"} name={"Arpit"}>
+    <div slot="top">Slot top</div>
+    <div>Slot default</div>
+    <div slot="bottom">Slot bottom</div>
+  </TestComponent>
+</section>
+<section>
+  <h3>Checkout <a href="/blog">Blog's</a></h3>
+</section>

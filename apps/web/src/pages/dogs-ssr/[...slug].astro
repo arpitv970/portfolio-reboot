@@ -1,0 +1,13 @@
+---
+export const prerender = false;
+import { DOGS } from "../../utils/constants";
+
+const { slug } = Astro.params;
+
+const page = DOGS.find((page) => page.slug === slug);
+if (!page) return Astro.redirect("/404");
+
+const { name, breed } = page;
+---
+
+<div>Hi this is {name}, of breed {breed}</div>

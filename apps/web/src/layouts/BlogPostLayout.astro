@@ -1,0 +1,10 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import { BlogFrontmatter } from "../utils/types";
+
+interface Props extends MarkdownLayoutProps<BlogFrontmatter> {}
+
+const { frontmatter } = Astro.props;
+---
+<h1>{frontmatter.title}</h1>
+<slot />
