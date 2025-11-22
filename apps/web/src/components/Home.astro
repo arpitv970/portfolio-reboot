@@ -1,5 +1,8 @@
 ---
 import TestComponent from "./TestComponent.astro";
+import { getCollection } from "astro:content";
+
+const blogs = await getCollection("blog");
 ---
 <section>
   <h1>This is Home page built using <a href="https://astro.build" target="_blank">Astro</a></h1>
@@ -25,5 +28,10 @@ import TestComponent from "./TestComponent.astro";
   </TestComponent>
 </section>
 <section>
-  <h3>Checkout <a href="/blog">Blog's</a></h3>
+  <h1>My Blogs</h1>
+  <ul>
+    {blogs.map(b => (
+    <li><a href={`/blog/${b.id}`}>{b.data.title}</a></li>
+    ))}
+  </ul>
 </section>

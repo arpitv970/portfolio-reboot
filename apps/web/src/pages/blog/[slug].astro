@@ -1,0 +1,30 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getEntries } from "astro:content";
+import { getCollection, render } from "astro:content";
+
+export const getStaticPaths = (async () => {
+	const blogs = await getCollection("blog");
+
+	return blogs.map((blog) => ({
+		params: { slug: blog.id },
+		props: { blog },
+	}));
+}) satisfies GetStaticPaths;
+
+const { blog } = Astro.props;
+const { Content } = await render(blog);
+const relatedBlogs = await getEntries(blog.data.relatedPosts);
+---
+<h1>{blog.data.title}</h1>
+<Content />
+
+<h3>Related Blogs</h3>
+<ul>
+{
+relatedBlogs.map(b => (
+<li><a href={`/blog/${b.id}`}>{b.data.title}</a></li>
+))
+}
+</ul>
+<a href="/">Back</a>
